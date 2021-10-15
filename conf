@@ -1,0 +1,27 @@
+TEMPLATES = site.tmpl
+SOURCE = src
+OUTPUT = site
+
+# this is a comment
+*.md:
+    config
+    ext .html
+    directorify
+    tags tags/*.tag
+    markdown
+    template site.tmpl # yeah, this is a comment as well
+
+index.md: blog/*.md
+    config
+    ext .html
+    inner-template
+    markdown
+    template page
+
+*.tag: blog/*.md
+    ext .html
+    directorify
+    template tag
+    markdown
+    template page
+
