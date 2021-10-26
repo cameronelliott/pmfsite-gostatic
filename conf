@@ -1,4 +1,4 @@
-TEMPLATES = site.tmpl
+TEMPLATES = maintmpl.html
 SOURCE = src
 OUTPUT = site
 
@@ -9,7 +9,7 @@ OUTPUT = site
     directorify
     tags tags/*.tag
     markdown
-    template site.tmpl # yeah, this is a comment as well
+    template maintmpl.html # yeah, this is a comment as well
 
 index.md: blog/*.md
     config

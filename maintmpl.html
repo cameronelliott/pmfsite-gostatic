@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Description">
+  <link rel="stylesheet" href="/fuckingstyle.css?v=xx">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖕</text></svg>">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+</head>
+
+<body>
+  {{ .Content }}
+
+
+
+
+  <!-- Copy code to clipboard -->
+  <script>
+    //https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/
+    function addCopyButtons(clipboard) {
+      document.querySelectorAll('pre > code').forEach(function (codeBlock) {
+        var button = document.createElement('button');
+        button.className = 'copy-code-button';
+        button.type = 'button';
+        button.innerText = 'Copy';
+
+        button.addEventListener('click', function () {
+          clipboard.writeText(codeBlock.innerText).then(function () {
+            /* Chrome doesn't seem to blur automatically,
+               leaving the button in a focused state. */
+            button.blur();
+
+            button.innerText = 'Copied!';
+
+            setTimeout(function () {
+              button.innerText = 'Copy';
+            }, 2000);
+          }, function (error) {
+            button.innerText = 'Error';
+          });
+        });
+
+        var pre = codeBlock.parentNode;
+        if (pre.parentNode.classList.contains('highlight')) {
+          var highlight = pre.parentNode;
+          highlight.parentNode.insertBefore(button, highlight);
+        } else {
+          pre.parentNode.insertBefore(button, pre);
+        }
+      });
+    }
+    addCopyButtons(navigator.clipboard);
+  </script>
+</body>
+
+</html>
