@@ -19,7 +19,7 @@ index.md: blog/*.md
     ext .html
     inner-template
     markdown
-    template page
+    template maintmpl.html # yeah, this is a comment as well
 
 *.tag: blog/*.md
     ext .html
