@@ -1,4 +1,4 @@
-TEMPLATES = maintmpl.html
+TEMPLATES = maintmpl.html fstyle.css
 SOURCE = src
 OUTPUT = site
 
@@ -10,6 +10,9 @@ OUTPUT = site
 #    tags tags/*.tag
     markdown chroma=monokai
     template maintmpl.html # yeah, this is a comment as well
+
+style.css:
+    template effingstyle.css
 
 index.md: blog/*.md
     config
@@ -24,4 +27,6 @@ index.md: blog/*.md
     template tag
     markdown
     template page
+
+
 
