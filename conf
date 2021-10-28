@@ -8,7 +8,7 @@ OUTPUT = site
     ext .html
     directorify
     tags tags/*.tag
-    markdown
+    markdown chroma=monokai
     template maintmpl.html # yeah, this is a comment as well
 
 index.md: blog/*.md
