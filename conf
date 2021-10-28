@@ -1,4 +1,4 @@
-TEMPLATES = maintmpl.html fstyle.css
+TEMPLATES = maintmpl.html effingstyle.css
 SOURCE = src
 OUTPUT = site
 
@@ -11,6 +11,7 @@ OUTPUT = site
     markdown chroma=monokai
     template maintmpl.html # yeah, this is a comment as well
 
+# you MUST create an empty src/style.css to get your style.css created
 style.css:
     template effingstyle.css
 
