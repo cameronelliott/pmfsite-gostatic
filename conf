@@ -7,7 +7,7 @@ OUTPUT = site
     config
     ext .html
     directorify
-    tags tags/*.tag
+#    tags tags/*.tag
     markdown chroma=monokai
     template maintmpl.html # yeah, this is a comment as well
 
