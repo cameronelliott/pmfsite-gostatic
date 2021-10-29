@@ -1,5 +1,5 @@
 TEMPLATES = maintmpl.html effingstyle.css
-SOURCE = src
+SOURCE = src-deadsfu.com
 OUTPUT = site
 
 # this is a comment
@@ -19,14 +19,14 @@ index.md: blog/*.md
     config
     ext .html
     inner-template
-    markdown
+    markdown chroma=monokai
     template maintmpl.html # yeah, this is a comment as well
 
 *.tag: blog/*.md
     ext .html
     directorify
     template tag
-    markdown
+    markdown chroma=monokai
     template page
 
 
