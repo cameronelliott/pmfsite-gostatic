@@ -13,7 +13,12 @@
 
 
 cameronelliott.com:80 {
-    root * /var/www/html/cameronelliott.com
+    root * /var/www/html/cameronelliott
+    file_server
+}
+
+deadsfu.com:80 {
+    root * /var/www/html/deadsfu
     file_server
 }
 
