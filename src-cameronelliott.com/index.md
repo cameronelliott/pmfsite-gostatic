@@ -15,6 +15,6 @@ Specifically, I'm mostly focused on DeadSFU.  An attempt to build a dead-simple 
 How to reach me:
 
 [Email - cameron@cameronelliott.com](mailto:cameron@cameronelliott.com)  
-[Linkedin](https://www.linkedin.com/feed/)  
+[Linkedin](https://www.linkedin.com/in/camelliott/)  
 [Twitter](https://twitter.com/cameronelliottX)
 
