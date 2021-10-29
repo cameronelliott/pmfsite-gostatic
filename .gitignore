@@ -1,4 +1,6 @@
 site
+site-*
+
 
 
 #########################
@@ -123,3 +125,4 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+site-cameronelliott.com/index.html
