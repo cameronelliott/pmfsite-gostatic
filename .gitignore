@@ -126,3 +126,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 site-cameronelliott.com/index.html
+src
