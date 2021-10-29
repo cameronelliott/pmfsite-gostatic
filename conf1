@@ -1,0 +1,33 @@
+TEMPLATES = maintmpl.html effingstyle.css
+SOURCE = src-cameronelliott.com
+OUTPUT = site
+
+# this is a comment
+*.md:
+    config
+    ext .html
+    directorify
+#    tags tags/*.tag
+    markdown chroma=monokai
+    template maintmpl.html # yeah, this is a comment as well
+
+# you MUST create an empty src/style.css to get your style.css created
+style.css:
+    template effingstyle.css
+
+index.md: blog/*.md
+    config
+    ext .html
+    inner-template
+    markdown chroma=monokai
+    template maintmpl.html # yeah, this is a comment as well
+
+*.tag: blog/*.md
+    ext .html
+    directorify
+    template tag
+    markdown chroma=monokai
+    template page
+
+
+
