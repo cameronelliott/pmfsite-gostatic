@@ -77,7 +77,7 @@ az login
 I know very little about Azure, but it appears containers need to be launched into instance
 groups, so you gotta create one.
 
-```bash
+```
 az group create -l eastus2 -n Stream
 az container create -g MyResourceGroup --name myalpine --image alpine:latest --ip-address public --ports 80 443
 ```
