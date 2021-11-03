@@ -83,7 +83,7 @@ az container create -g MyResourceGroup --name myalpine --image alpine:latest --i
 ```
 
 If it works, you'll see something like this:
-```
+```json
 {
   "id": "/subscriptions/xxxxx/resourceGroups/Stream",
   "location": "eastus2",
@@ -103,7 +103,7 @@ Note the *Succeeded* in the output.
 
 Create a file, `template.json` with the following Json:
 
-```
+```json
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
@@ -248,7 +248,7 @@ If you got this working, you're nearly there, cool!
 Fixing `changeme`, or using an IP address, you can test to make sure the OBS/FTL port is open.
 This isn't strictly necessary, but I like to sometimes double check stuff.
 If this works, you will see `...Connected...`, if you don't see `...Connected...`, then you are not reaching the FTL port of the container, something isn't right.
-```
+```bash
 curl -v telnet://changeme.eastus2.azurecontainer.io:8084
 ```
 
