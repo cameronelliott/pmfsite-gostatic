@@ -55,7 +55,7 @@ But in that case, why use WebRTC?
 Like the last method, the cut happens instantly, replaying from the last
 keyframe, but rather than maintaining the new delay between RX and TX,
 when the next keyframe is received on RX, another switch is made, to
-real-time forwarding of packages between RX and TX.
+real-time forwarding of packets between RX and TX.
 This means the viewer will see a scene cut of on average keyframe-period/2
 in their video stream.
 *Nonetheless* this seems to me like the ideal way to implement instant
