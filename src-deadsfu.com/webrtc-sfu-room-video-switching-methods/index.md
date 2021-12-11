@@ -37,6 +37,8 @@ This is beautiful, as a keyframe as generated right when a switch is requested,
 on the incoming stream. The issue here is the is difficult to implement and
 presents a new contstraint on SFU capacity. Depending on the implementation,
 SFU capacity may depend on switching frequency and stream resolutions.
+Designers need to implement a fancy transcoder, and consider transcoding capacities
+now when discussing SFU capacity.
 It seems fairly problematic from this perspective.
 
 ## Method: Replay from Last Keyframe / Keep New Latency 
