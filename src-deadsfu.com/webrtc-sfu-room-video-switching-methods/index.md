@@ -62,6 +62,21 @@ in their video stream.
 room switching without introducting big latency periods into the
 receivers video stream.
 
+## Method: Replay from Last Keyframe / Gradually Reduce Latency
+
+Like the last method, the cut happens immediately.
+But in this, case, rather than a second cut on a new keyframe,
+the latency between RX and TX is gradually reduced.
+There are a couple ways to do this:
+1. Replay buffered packets out faster than real-time, thus reducing
+the buffer slowly. 
+2. Chop the last frame off of each GOP thus playing out faster than realtime.
+
+The question is here, how long will it take to get to real-time?
+Also, both of this methods of are not trivial to implement, and
+testing compatibility with browsers is super expensive and time consuming.
+
+
 
 
 
